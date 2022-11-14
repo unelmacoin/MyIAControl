@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      #rules_block {
+        margin: 11px 0;
+      }
+      .rule_item {
+        margin: 7px 0;
+        padding: 2px 4px;
+        border: 1px solid #d2d2d2;
+      }
+      .deny_time {
+        width: 90px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Current rules</h1>
+    <form>
+      <div id="rules_block">
+        <div class="rule_item">
+          <div style="float: right">
+            <a href="#" class="remove_rule">Remove rule</a>
+          </div>
+          <label
+            >Domain:
+            <input type="text" name="domain[]" /> </label
+          ><br />
+          <label
+            >Deny from
+            <input
+              type="text"
+              name="deny_start[]"
+              class="deny_time"
+              maxlength="5"
+              placeholder="09:10"
+            />
+            to
+            <input
+              type="text"
+              name="deny_end[]"
+              class="deny_time"
+              maxlength="5"
+              placeholder="21:15"
+            />
+            every day.
+          </label>
+        </div>
+      </div>
+      <div>
+        <input type="button" id="add_rule" value="Add rule" />
+      </div>
+      <div>
+        <input type="submit" name="do_save" value="Update rules" />
+      </div>
+    </form>
+    <script src="options.js"></script>
+  </body>
+</html>
